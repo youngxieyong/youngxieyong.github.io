@@ -6,15 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="微服务技术栈1. 基础架构1.1   组件 技术（加粗是稍微了解点）    基本技术 SpringBoot   注册中心 Eureka、Consul、Zookeeper、Nacos、etcd   配置中心 Diamond、Archaius、Apollo、SpringCloud Config   服务通信&#x2F;负载均衡 Feign、Ribbon   服务网关 SpringCloud Gateway、zu">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/index.html">
+<meta property="og:url" content="http://example.com/2020/12/17/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%8A%80%E6%9C%AF%E6%A0%88/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="微服务技术栈1. 基础架构1.1   组件 技术（加粗是稍微了解点）    基本技术 SpringBoot   注册中心 Eureka、Consul、Zookeeper、Nacos、etcd   配置中心 Diamond、Archaius、Apollo、SpringCloud Config   服务通信&#x2F;负载均衡 Feign、Ribbon   服务网关 SpringCloud Gateway、zu">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/32293-41122dcdb3f3aeef.png?imageMogr2/auto-orient/strip%7CimageView2/2/format/webp">
+<meta property="article:published_time" content="2020-12-17T07:47:22.451Z">
+<meta property="article:modified_time" content="2020-09-18T02:22:05.455Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/32293-41122dcdb3f3aeef.png?imageMogr2/auto-orient/strip%7CimageView2/2/format/webp">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,202 +156,353 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-微服务技术栈" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="微服务技术栈"><a href="#微服务技术栈" class="headerlink" title="微服务技术栈"></a>微服务技术栈</h3><h4 id="1-基础架构"><a href="#1-基础架构" class="headerlink" title="1. 基础架构"></a>1. 基础架构</h4><h6 id="1-1"><a href="#1-1" class="headerlink" title="1.1"></a>1.1</h6><table>
+<thead>
+<tr>
+<th>组件</th>
+<th>技术（加粗是稍微了解点）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>基本技术</td>
+<td><strong>SpringBoot</strong></td>
+</tr>
+<tr>
+<td>注册中心</td>
+<td><strong>Eureka</strong>、Consul、<strong>Zookeeper</strong>、Nacos、etcd</td>
+</tr>
+<tr>
+<td>配置中心</td>
+<td>Diamond、Archaius、Apollo、SpringCloud Config</td>
+</tr>
+<tr>
+<td>服务通信/负载均衡</td>
+<td><strong>Feign</strong>、<strong>Ribbon</strong></td>
+</tr>
+<tr>
+<td>服务网关</td>
+<td>SpringCloud Gateway、zuul</td>
+</tr>
+<tr>
+<td>服务熔断</td>
+<td><strong>Hystrix</strong>、Envoy</td>
+</tr>
+<tr>
+<td>安全鉴权</td>
+<td><strong>SpringCloud Security</strong>、JWT、OAuth2</td>
+</tr>
+<tr>
+<td>链路追踪</td>
+<td>Zipkin、Brave、Dapper</td>
+</tr>
+<tr>
+<td>日志监控</td>
+<td>logback、ELK</td>
+</tr>
+<tr>
+<td>消息驱动</td>
+<td>SpringCloud Stream、Kafka</td>
+</tr>
+<tr>
+<td>消息总线</td>
+<td>SpringCloud Bus</td>
+</tr>
+<tr>
+<td>API</td>
+<td><strong>Swagger</strong></td>
+</tr>
+<tr>
+<td>Devops</td>
+<td>Jenkins、Docker、Git、Kubernetes、Harbor</td>
+</tr>
+</tbody></table>
+<h6 id="1-2"><a href="#1-2" class="headerlink" title="1.2"></a>1.2</h6><table>
+<thead>
+<tr>
+<th>微服务条目</th>
+<th>落地技术</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>服务开发</td>
+<td>Spring、SpringMVC、SpringBoot</td>
+</tr>
+<tr>
+<td>服务配置与管理</td>
+<td>Netflix公司Archaius、阿里Diamond等</td>
+</tr>
+<tr>
+<td>服务注册和发现</td>
+<td>Eureka、Consul、Zookeeper</td>
+</tr>
+<tr>
+<td>服务调用</td>
+<td>RPC、gRPC、Rest****</td>
+</tr>
+<tr>
+<td>服务熔断</td>
+<td>Hystrix、Envoy****</td>
+</tr>
+<tr>
+<td>负载均衡</td>
+<td>Nginx、Ribbon****</td>
+</tr>
+<tr>
+<td>服务接口调用</td>
+<td>Feign</td>
+</tr>
+<tr>
+<td>消息队列</td>
+<td>ActiveMQ、RabbitMQ、Kafka</td>
+</tr>
+<tr>
+<td>服务配置中心管理</td>
+<td>SpringClodeConfig、Chef等</td>
+</tr>
+<tr>
+<td>服务路由</td>
+<td>Zuul</td>
+</tr>
+<tr>
+<td>服务监控</td>
+<td>Zabbix、Nagios、Metrics、Spectator</td>
+</tr>
+<tr>
+<td>全链路追踪</td>
+<td>Zipkin、Brave<strong>、</strong>Dapper****</td>
+</tr>
+<tr>
+<td>数据流操作开发包</td>
+<td>SpringCloud Stream（封装与Redis\Rabbit、Kafka等发送接受消息）</td>
+</tr>
+<tr>
+<td>服务部署</td>
+<td>Dockers、OpenStack、Kubernetes等</td>
+</tr>
+<tr>
+<td>事件消息总线</td>
+<td>Spring Cloud Bus</td>
+</tr>
+</tbody></table>
+<h6 id="1-3"><a href="#1-3" class="headerlink" title="1.3"></a>1.3</h6><p><img src="https://upload-images.jianshu.io/upload_images/32293-41122dcdb3f3aeef.png?imageMogr2/auto-orient/strip%7CimageView2/2/format/webp" alt="img"></p>
+<h4 id="2-注册中心"><a href="#2-注册中心" class="headerlink" title="2. 注册中心"></a>2. 注册中心</h4><p>角色：</p>
+<ul>
+<li>服务提供者</li>
+<li>服务消费者</li>
+<li>注册中心</li>
+</ul>
+<p>CAP原则又称CAP定理，指的是在一个分布式系统中， Consistency（一致性）、 Availability（可用性）、Partition tolerance（分区容错性），三者不可得兼。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Eureka</th>
+<th>Consul</th>
+<th>Nacos</th>
+<th>Zookeeper</th>
+<th>etcd</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>CAP</td>
+<td>AP</td>
+<td>CP</td>
+<td>AP</td>
+<td>CP</td>
+<td>CP</td>
+</tr>
+<tr>
+<td>健康检查</td>
+<td>keep alive</td>
+<td>TCP/HTTP/gRPC/Cmd</td>
+<td>TCP/HTTP/MYSQL/keep alive</td>
+<td>keep alive</td>
+<td>keep alive</td>
+</tr>
+<tr>
+<td>KV存储</td>
+<td></td>
+<td>支持</td>
+<td></td>
+<td>支持</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>访问协议</td>
+<td>HTTP</td>
+<td>HTTP/DNS</td>
+<td>HTTP/DNS</td>
+<td>TCP</td>
+<td>HTTP/grpc</td>
+</tr>
+<tr>
+<td>SpringCloud集成</td>
+<td>支持</td>
+<td>支持</td>
+<td>支持</td>
+<td>支持</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>Dubbo集成</td>
+<td></td>
+<td></td>
+<td>支持</td>
+<td>支持</td>
+<td></td>
+</tr>
+<tr>
+<td>K8S集成</td>
+<td></td>
+<td>支持</td>
+<td>支持</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/17/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E5%92%8C%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F/" class="archive-article-date">
-  	<time datetime="2020-12-17T07:47:22.493Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-17</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2020/12/17/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%8A%80%E6%9C%AF%E6%A0%88/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/17/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E4%BD%BF%E7%94%A8%E7%9A%84%E5%9B%9B%E7%A7%8D%E5%9C%BA%E6%99%AF%E4%BB%8B%E7%BB%8D/" class="archive-article-date">
-  	<time datetime="2020-12-17T07:47:22.475Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-17</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/17/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%90%86%E8%AE%BA/" class="archive-article-date">
-  	<time datetime="2020-12-17T07:47:22.453Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-17</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+<nav id="article-nav">
+  
+    <a href="/2020/12/17/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%90%86%E8%AE%BA/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/12/17/RPC%E5%9F%BA%E6%9C%AC%E8%AE%A4%E8%AF%86%20/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/17/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%8A%80%E6%9C%AF%E6%A0%88/" class="archive-article-date">
-  	<time datetime="2020-12-17T07:47:22.451Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-17</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/17/RPC%E5%9F%BA%E6%9C%AC%E8%AE%A4%E8%AF%86%20/" class="archive-article-date">
-  	<time datetime="2020-12-17T07:47:22.433Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-17</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+        
+        
+    </div>
+</aside>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/17/Dubbo+Zookeeper%E4%BE%9D%E8%B5%96%E6%B1%87%E6%80%BB/" class="archive-article-date">
-  	<time datetime="2020-12-17T07:47:22.416Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-17</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/17/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2020-12-17T07:38:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-17</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/12/17/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">我的第一个博客文章</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/17/hello-world/" class="archive-article-date">
-  	<time datetime="2020-12-17T06:22:58.928Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/12/17/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -368,8 +525,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

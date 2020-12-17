@@ -6,15 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="微服务概念“微服务”-在拥挤的软件体系结构大街上的又一个新名词。尽管我们的天性是轻蔑地掠过这些事物，但是这些术语描述了一种越来越受欢迎的软件系统样式。在过去的几年中，我们已经看到许多项目都使用这种样式，到目前为止，结果是非常积极的，以至于对于我们的许多同事来说，这已成为构建企业应用程序的默认样式。但是，令人遗憾的是，没有太多信息可以概述微服务风格是什么以及如何实现。 简而言之，微服务架构样式[1]">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/index.html">
+<meta property="og:url" content="http://example.com/2020/12/17/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%90%86%E8%AE%BA/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="微服务概念“微服务”-在拥挤的软件体系结构大街上的又一个新名词。尽管我们的天性是轻蔑地掠过这些事物，但是这些术语描述了一种越来越受欢迎的软件系统样式。在过去的几年中，我们已经看到许多项目都使用这种样式，到目前为止，结果是非常积极的，以至于对于我们的许多同事来说，这已成为构建企业应用程序的默认样式。但是，令人遗憾的是，没有太多信息可以概述微服务风格是什么以及如何实现。 简而言之，微服务架构样式[1]">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="c:/Users/63534/AppData/Roaming/Typora/typora-user-images/image-20200911163015754.png">
+<meta property="article:published_time" content="2020-12-17T07:47:22.453Z">
+<meta property="article:modified_time" content="2020-09-22T02:15:44.236Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:/Users/63534/AppData/Roaming/Typora/typora-user-images/image-20200911163015754.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,202 +156,165 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-微服务理论" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="微服务概念"><a href="#微服务概念" class="headerlink" title="微服务概念"></a>微服务概念</h3><p>“微服务”-在拥挤的软件体系结构大街上的又一个新名词。尽管我们的天性是轻蔑地掠过这些事物，但是这些术语描述了一种越来越受欢迎的软件系统样式。在过去的几年中，我们已经看到许多项目都使用这种样式，到目前为止，结果是非常积极的，以至于对于我们的许多同事来说，这已成为构建企业应用程序的默认样式。但是，令人遗憾的是，没有太多信息可以概述微服务风格是什么以及如何实现。</p>
+<p><strong>简而言之，微服务架构样式[<a target="_blank" rel="noopener" href="https://martinfowler.com/articles/microservices.html#footnote-etymology">1]</a>是一种将单个应用程序开发为一组小服务的方法，每个小服务都在自己的进程中运行并与轻量级机制（通常是HTTP资源API）进行通信。这些服务围绕业务功能构建，并且可以由全自动部署机制独立部署。这些服务的集中管理几乎没有，可以用不同的编程语言编写并使用不同的数据存储技术。</strong></p>
+<p>要开始解释微服务样式，将其与整体式样式进行比较很有用：以单个单元构建的整体式应用程序。企业应用程序通常由三个主要部分构建：客户端用户界面（由在用户计算机上的浏览器中运行的HTML页面和javascript组成）和数据库（由插入到常见的关系数据库管理中的许多表组成）系统）和服务器端应用程序。服务器端应用程序将处理HTTP请求，执行域逻辑，从数据库中检索和更新数据，以及选择并填充要发送到浏览器的HTML视图。这个服务器端应用程序是一个<em>整体</em> -一个逻辑可执行文件[<a target="_blank" rel="noopener" href="https://martinfowler.com/articles/microservices.html#footnote-monolith">2]</a>。对系统的任何更改都涉及构建和部署新版本的服务器端应用程序。</p>
+<p>这种整体服务器是构建此类系统的自然方法。您处理请求的所有逻辑都在单个过程中运行，从而使您可以使用语言的基本功能将应用程序划分为类，函数和名称空间。一定要小心，您可以在开发人员的笔记本电脑上运行和测试应用程序，并使用部署管道来确保正确测试了更改并将其部署到生产中。您可以通过在负载均衡器后面运行许多实例来水平缩放整体。</p>
+<p>整体应用程序可以成功，但是越来越多的人对它们感到沮丧，尤其是随着越来越多的应用程序部署到云中。变更周期捆绑在一起-对应用程序的一小部分进行更改，需要重建和部署整个整体。随着时间的流逝，通常很难保持良好的模块化结构，这使得很难保留只影响该模块中一个模块的更改。扩展要求扩展整个应用程序，而不是需要更多资源的部分应用程序。</p>
+<p><img src="C:\Users\63534\AppData\Roaming\Typora\typora-user-images\image-20200911163015754.png" alt="image-20200911163015754"></p>
+<p>这些挫败感导致了微服务架构的风格：将应用程序构建为服务套件。除了服务可独立部署和可扩展之外，每个服务还提供了牢固的模块边界，甚至允许使用不同的编程语言编写不同的服务。他们也可以由不同的团队管理。</p>
+<p>我们并不声称微服务风格是新颖的或创新的，它的根源至少可以追溯到Unix的设计原理。但是我们确实认为没有足够的人考虑微服务架构，如果使用微服务架构，许多软件开发会更好</p>
+<h3 id="微服务架构的特征"><a href="#微服务架构的特征" class="headerlink" title="微服务架构的特征"></a>微服务架构的特征</h3><p>我们不能说对微服务架构风格有一个正式的定义，但是我们可以尝试描述我们认为适合该标签的架构的共同特征。与任何概述通用特征的定义一样，并非所有微服务架构都具有所有特征，但是我们确实希望大多数微服务架构都具有大多数特征。尽管我们的作者一直是这个相当松散的社区的活跃成员，但我们的意图是尝试描述我们在自己的工作以及我们所认识的团队的类似努力中所看到的。特别是，我们没有规定要符合的定义。</p>
+<h5 id="通过服务进行组件化"><a href="#通过服务进行组件化" class="headerlink" title="通过服务进行组件化"></a>通过服务进行组件化</h5><p>自从我们从事软件行业以来，就一直希望通过将组件连接在一起来构建系统，这与我们在物理世界中看到事物的方式非常相似。在过去的几十年中，我们看到了在大多数语言平台中都包含的大量通用库概要中取得了长足的进步。</p>
+<p>在谈论组件时，我们会遇到难以定义组件的定义。我们的定义是， <strong>组件是可以独立替换和升级的软件单元</strong>。</p>
+<p>微服务架构将使用库，但是它们将自己的软件组成组件的主要方式是分解成服务。我们将<strong>库</strong>定义 为链接到程序中并使用内存中函数调用进行调用的组件，而<strong>服务</strong>则是进程外组件，它们通过某种机制（例如Web服务请求或远程过程调用）进行通信。（这与许多OO程序[<a target="_blank" rel="noopener" href="https://martinfowler.com/articles/microservices.html#footnote-service-object">3]</a>中的服务对象的概念不同。）</p>
+<p>使用服务作为组件（而不是库）的主要原因之一是服务是可独立部署的。如果您的应用程序[<a target="_blank" rel="noopener" href="https://martinfowler.com/articles/microservices.html#footnote-application">4]</a>在单个过程中包含多个库，则对任何单个组件的更改都将导致必须重新部署整个应用程序。但是，如果该应用程序分解为多个服务，则可以预期许多单个服务的更改仅要求重新部署该服务。这不是绝对的，某些更改会改变服务接口，从而导致某种程度的协调，但是好的微服务架构的目的是通过服务契约的内聚性服务边界和演化机制来最小化它们。</p>
+<p>将服务用作组件的另一个结果是更明确的组件接口。大多数语言都没有定义明确的<a target="_blank" rel="noopener" href="https://martinfowler.com/bliki/PublishedInterface.html">发布接口</a>的良好机制。通常，唯一的文档和纪律可以防止客户端破坏组件的封装，从而导致组件之间的耦合过于紧密。服务通过使用显式的远程调用机制使避免这种情况变得更加容易。</p>
+<p>使用这样的服务确实有缺点。远程调用比进程内调用更昂贵，因此远程API需要更粗粒度，这通常更难使用。如果您需要更改组件之间的职责分配，那么当您跨越流程边界时，这种行为转移就很难做到。</p>
+<p>初步近似，我们可以观察到服务映射到运行时进程，但这仅是初步近似。服务可能包含将始终一起开发和部署的多个流程，例如仅由该服务使用的应用程序流程和数据库。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/17/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E5%92%8C%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F/" class="archive-article-date">
-  	<time datetime="2020-12-17T07:47:22.493Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-17</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2020/12/17/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%90%86%E8%AE%BA/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/17/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E4%BD%BF%E7%94%A8%E7%9A%84%E5%9B%9B%E7%A7%8D%E5%9C%BA%E6%99%AF%E4%BB%8B%E7%BB%8D/" class="archive-article-date">
-  	<time datetime="2020-12-17T07:47:22.475Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-17</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/17/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%90%86%E8%AE%BA/" class="archive-article-date">
-  	<time datetime="2020-12-17T07:47:22.453Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-17</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+<nav id="article-nav">
+  
+    <a href="/2020/12/17/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E4%BD%BF%E7%94%A8%E7%9A%84%E5%9B%9B%E7%A7%8D%E5%9C%BA%E6%99%AF%E4%BB%8B%E7%BB%8D/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/12/17/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%8A%80%E6%9C%AF%E6%A0%88/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/17/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%8A%80%E6%9C%AF%E6%A0%88/" class="archive-article-date">
-  	<time datetime="2020-12-17T07:47:22.451Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-17</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/17/RPC%E5%9F%BA%E6%9C%AC%E8%AE%A4%E8%AF%86%20/" class="archive-article-date">
-  	<time datetime="2020-12-17T07:47:22.433Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-17</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+        
+        
+    </div>
+</aside>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/17/Dubbo+Zookeeper%E4%BE%9D%E8%B5%96%E6%B1%87%E6%80%BB/" class="archive-article-date">
-  	<time datetime="2020-12-17T07:47:22.416Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-17</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/17/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2020-12-17T07:38:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-17</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/12/17/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">我的第一个博客文章</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/17/hello-world/" class="archive-article-date">
-  	<time datetime="2020-12-17T06:22:58.928Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/12/17/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -368,8 +337,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

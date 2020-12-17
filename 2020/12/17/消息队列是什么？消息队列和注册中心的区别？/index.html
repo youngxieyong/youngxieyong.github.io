@@ -6,15 +6,48 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="1、消息队列是什么？消息队列和注册中心的区别？ 一、什么是消息队列？消息队列不知道大家看到这个词的时候，会不会觉得它是一个比较高端的技术，反正我是觉得它好像是挺牛逼的。  消息队列，一般我们会简称它为MQ(Message Queue)，嗯，就是很直白的简写。  我们先不管消息(Message)这个词，来看看队列(Queue)。这一看，队列大家应该都熟悉吧。  队列是一种先进先出的数据结构。   在">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/index.html">
+<meta property="og:url" content="http://example.com/2020/12/17/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E5%92%8C%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1、消息队列是什么？消息队列和注册中心的区别？ 一、什么是消息队列？消息队列不知道大家看到这个词的时候，会不会觉得它是一个比较高端的技术，反正我是觉得它好像是挺牛逼的。  消息队列，一般我们会简称它为MQ(Message Queue)，嗯，就是很直白的简写。  我们先不管消息(Message)这个词，来看看队列(Queue)。这一看，队列大家应该都熟悉吧。  队列是一种先进先出的数据结构。   在">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://pic4.zhimg.com/50/v2-607a5661776bdf018ed26cdfca23cf11_hd.jpg?source=1940ef5c">
+<meta property="og:image" content="https://pic4.zhimg.com/80/v2-607a5661776bdf018ed26cdfca23cf11_720w.jpg?source=1940ef5c">
+<meta property="og:image" content="https://pic1.zhimg.com/50/v2-17e40843cb64e2e2b6e2faf08f1fe717_hd.jpg?source=1940ef5c">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-17e40843cb64e2e2b6e2faf08f1fe717_720w.jpg?source=1940ef5c">
+<meta property="og:image" content="https://pic2.zhimg.com/50/v2-1c69d2be58358e9743e39130b41993a3_hd.jpg?source=1940ef5c">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-1c69d2be58358e9743e39130b41993a3_720w.jpg?source=1940ef5c">
+<meta property="og:image" content="https://pic1.zhimg.com/50/v2-e43cace21f924b41f03b2982632f489d_hd.jpg?source=1940ef5c">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-e43cace21f924b41f03b2982632f489d_720w.jpg?source=1940ef5c">
+<meta property="og:image" content="https://picb.zhimg.com/50/v2-f8a27d712f1f95027490e5d2da4b3179_hd.jpg?source=1940ef5c">
+<meta property="og:image" content="https://picb.zhimg.com/80/v2-f8a27d712f1f95027490e5d2da4b3179_720w.jpg?source=1940ef5c">
+<meta property="og:image" content="https://pic3.zhimg.com/50/v2-2e1f43228dbcabf700df8d7701451b28_hd.jpg?source=1940ef5c">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-2e1f43228dbcabf700df8d7701451b28_720w.jpg?source=1940ef5c">
+<meta property="og:image" content="https://pic3.zhimg.com/50/v2-3b3be237d7b92263c705fceea2375daa_hd.jpg?source=1940ef5c">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-3b3be237d7b92263c705fceea2375daa_720w.jpg?source=1940ef5c">
+<meta property="og:image" content="https://pic3.zhimg.com/50/v2-8b6b8046286c88206fa144136f803af3_hd.jpg?source=1940ef5c">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-8b6b8046286c88206fa144136f803af3_720w.jpg?source=1940ef5c">
+<meta property="og:image" content="https://pic3.zhimg.com/50/v2-5c3a3b8277e934440212c9f2591dc656_hd.jpg?source=1940ef5c">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-5c3a3b8277e934440212c9f2591dc656_720w.jpg?source=1940ef5c">
+<meta property="og:image" content="https://picb.zhimg.com/50/v2-a391345118fc2545b232411efea7b80d_hd.jpg?source=1940ef5c">
+<meta property="og:image" content="https://picb.zhimg.com/80/v2-a391345118fc2545b232411efea7b80d_720w.jpg?source=1940ef5c">
+<meta property="og:image" content="https://pic3.zhimg.com/50/v2-2ab4cb03f2e8a6a7ef28deb130661366_hd.jpg?source=1940ef5c">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-2ab4cb03f2e8a6a7ef28deb130661366_720w.jpg?source=1940ef5c">
+<meta property="og:image" content="https://picb.zhimg.com/50/v2-bfe84bf8578c4e8e47fe527106b6b426_hd.jpg?source=1940ef5c">
+<meta property="og:image" content="https://picb.zhimg.com/80/v2-bfe84bf8578c4e8e47fe527106b6b426_720w.jpg?source=1940ef5c">
+<meta property="og:image" content="https://pic4.zhimg.com/50/v2-56f04a3376f0af3565e363890de22650_hd.jpg?source=1940ef5c">
+<meta property="og:image" content="https://pic4.zhimg.com/80/v2-56f04a3376f0af3565e363890de22650_720w.jpg?source=1940ef5c">
+<meta property="og:image" content="https://pic3.zhimg.com/50/v2-418113f16d65370c06e4c657b3497e59_hd.jpg?source=1940ef5c">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-418113f16d65370c06e4c657b3497e59_720w.jpg?source=1940ef5c">
+<meta property="article:published_time" content="2020-12-17T07:47:22.493Z">
+<meta property="article:modified_time" content="2020-09-18T09:56:46.384Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic4.zhimg.com/50/v2-607a5661776bdf018ed26cdfca23cf11_hd.jpg?source=1940ef5c">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,202 +183,279 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-消息队列是什么？消息队列和注册中心的区别？" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1、消息队列是什么？消息队列和注册中心的区别？</p>
+<h3 id="一、什么是消息队列？"><a href="#一、什么是消息队列？" class="headerlink" title="一、什么是消息队列？"></a>一、什么是消息队列？</h3><p>消息队列不知道大家看到这个词的时候，会不会觉得它是一个比较<strong>高端</strong>的技术，反正我是觉得它好像是挺牛逼的。</p>
+<blockquote>
+<p>消息队列，一般我们会简称它为MQ(Message Queue)，嗯，就是很直白的简写。</p>
+</blockquote>
+<p>我们先不管消息(Message)这个词，来看看队列(Queue)。这一看，队列大家应该都熟悉吧。</p>
+<blockquote>
+<p>队列是一种<strong>先进先出</strong>的数据结构。</p>
+</blockquote>
+<p><img src="https://pic4.zhimg.com/50/v2-607a5661776bdf018ed26cdfca23cf11_hd.jpg?source=1940ef5c" alt="img"><img src="https://pic4.zhimg.com/80/v2-607a5661776bdf018ed26cdfca23cf11_720w.jpg?source=1940ef5c" alt="img"></p>
+<p>在Java里边，已经实现了不少的队列了：</p>
+<p><img src="https://pic1.zhimg.com/50/v2-17e40843cb64e2e2b6e2faf08f1fe717_hd.jpg?source=1940ef5c" alt="img"><img src="https://pic1.zhimg.com/80/v2-17e40843cb64e2e2b6e2faf08f1fe717_720w.jpg?source=1940ef5c" alt="img"></p>
+<p>那为什么还需要消息队列(MQ)这种<strong>中间件</strong>呢？？？其实这个问题，跟之前我学Redis的时候很像。Redis是一个以<code>key-value</code>形式存储的内存数据库，明明我们可以使用类似HashMap这种实现类就可以达到类似的效果了，那还为什么要Redis？《<a href="https://link.zhihu.com/?target=https://mp.weixin.qq.com/s?__biz=MzI4Njg5MDA5NA==&mid=2247484609&idx=1&sn=4c053236699fde3c2db1241ab497487b&chksm=ebd745c0dca0ccd682e91938fc30fa947df1385b06d6ae9bb52514967b0736c66684db2f1ac9&token=177635168&lang=zh_CN%23rd">Redis合集</a>》</p>
+<ul>
+<li>到这里，大家可以先猜猜为什么要用消息队列(MQ)这种<strong>中间件</strong>，下面会继续补充。</li>
+</ul>
+<p>消息队列可以简单理解为：<strong>把要传输的数据放在队列中</strong>。</p>
+<p><img src="https://pic2.zhimg.com/50/v2-1c69d2be58358e9743e39130b41993a3_hd.jpg?source=1940ef5c" alt="img"><img src="https://pic2.zhimg.com/80/v2-1c69d2be58358e9743e39130b41993a3_720w.jpg?source=1940ef5c" alt="img"></p>
+<p>科普：</p>
+<ul>
+<li>把数据放到消息队列叫做<strong>生产者</strong></li>
+<li>从消息队列里边取数据叫做<strong>消费者</strong></li>
+</ul>
+<h3 id="二、为什么要用消息队列？"><a href="#二、为什么要用消息队列？" class="headerlink" title="二、为什么要用消息队列？"></a>二、为什么要用消息队列？</h3><p>为什么要用消息队列，也就是在问：用了消息队列有什么好处。我们看看以下的场景</p>
+<h4 id="2-1-解耦"><a href="#2-1-解耦" class="headerlink" title="2.1 解耦"></a>2.1 解耦</h4><p>现在我有一个系统A，系统A可以产生一个<code>userId</code></p>
+<p><img src="https://pic1.zhimg.com/50/v2-e43cace21f924b41f03b2982632f489d_hd.jpg?source=1940ef5c" alt="img"><img src="https://pic1.zhimg.com/80/v2-e43cace21f924b41f03b2982632f489d_720w.jpg?source=1940ef5c" alt="img"></p>
+<p>然后，现在有系统B和系统C都需要这个<code>userId</code>去做相关的操作</p>
+<p><img src="https://picb.zhimg.com/50/v2-f8a27d712f1f95027490e5d2da4b3179_hd.jpg?source=1940ef5c" alt="img"><img src="https://picb.zhimg.com/80/v2-f8a27d712f1f95027490e5d2da4b3179_720w.jpg?source=1940ef5c" alt="img"></p>
+<p>写成伪代码可能是这样的：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SystemA</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 系统B和系统C的依赖</span></span><br><span class="line">    SystemB systemB = <span class="keyword">new</span> SystemB();</span><br><span class="line">    SystemC systemC = <span class="keyword">new</span> SystemC();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 系统A独有的数据userId</span></span><br><span class="line">    <span class="keyword">private</span> String userId = <span class="string">&quot;Java3y&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doSomething</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 系统B和系统C都需要拿着系统A的userId去操作其他的事</span></span><br><span class="line">        systemB.SystemBNeed2do(userId);</span><br><span class="line">        systemC.SystemCNeed2do(userId);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>结构图如下：</p>
+<p><img src="https://pic3.zhimg.com/50/v2-2e1f43228dbcabf700df8d7701451b28_hd.jpg?source=1940ef5c" alt="img"><img src="https://pic3.zhimg.com/80/v2-2e1f43228dbcabf700df8d7701451b28_720w.jpg?source=1940ef5c" alt="img"></p>
+<p>ok，一切平安无事度过了几个天。</p>
+<p>某一天，系统B的负责人告诉系统A的负责人，现在系统B的<code>SystemBNeed2do(String userId)</code>这个接口不再使用了，<strong>让系统A别去调它了</strong>。</p>
+<p>于是，系统A的负责人说”好的，那我就不调用你了。”，于是就<strong>把调用系统B接口的代码给删掉了</strong>：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doSomething</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 系统A不再调用系统B的接口了</span></span><br><span class="line">  <span class="comment">//systemB.SystemBNeed2do(userId);</span></span><br><span class="line">  systemC.SystemCNeed2do(userId);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>又过了几天，系统D的负责人接了个需求，也需要用到系统A的userId，于是就跑去跟系统A的负责人说：”老哥，我要用到你的userId，你调一下我的接口吧”</p>
+<p>于是系统A说：”没问题的，这就搞”</p>
+<p><img src="https://pic3.zhimg.com/50/v2-3b3be237d7b92263c705fceea2375daa_hd.jpg?source=1940ef5c" alt="img"><img src="https://pic3.zhimg.com/80/v2-3b3be237d7b92263c705fceea2375daa_720w.jpg?source=1940ef5c" alt="img"></p>
+<p>然后，系统A的代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SystemA</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 已经不再需要系统B的依赖了</span></span><br><span class="line">    <span class="comment">// SystemB systemB = new SystemB();</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 系统C和系统D的依赖</span></span><br><span class="line">    SystemC systemC = <span class="keyword">new</span> SystemC();</span><br><span class="line">    SystemD systemD = <span class="keyword">new</span> SystemD();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 系统A独有的数据</span></span><br><span class="line">    <span class="keyword">private</span> String userId = <span class="string">&quot;Java3y&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doSomething</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 已经不再需要系统B的依赖了</span></span><br><span class="line">        <span class="comment">//systemB.SystemBNeed2do(userId);</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 系统C和系统D都需要拿着系统A的userId去操作其他的事</span></span><br><span class="line">        systemC.SystemCNeed2do(userId);</span><br><span class="line">        systemD.SystemDNeed2do(userId);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>时间飞逝：</p>
+<ul>
+<li>又过了几天，系统E的负责人过来了，告诉系统A，需要userId。</li>
+<li>又过了几天，系统B的负责人过来了，告诉系统A，还是重新掉那个接口吧。</li>
+<li>又过了几天，系统F的负责人过来了，告诉系统A，需要userId。</li>
+<li>……</li>
+</ul>
+<p>于是系统A的负责人，每天都被这给骚扰着，改来改去，改来改去…….</p>
+<p>还有另外一个问题，调用系统C的时候，如果系统C挂了，系统A还得想办法处理。如果调用系统D时，由于网络延迟，请求超时了，那系统A是反馈<code>fail</code>还是重试？？</p>
+<p>最后，系统A的负责人，觉得隔一段时间就改来改去，没意思，于是就跑路了。</p>
+<p>然后，公司招来一个大佬，大佬经过几天熟悉，上来就说：<strong>将系统A的userId写到消息队列中，这样系统A就不用经常改动了</strong>。为什么呢？下面我们来一起看看：</p>
+<p><img src="https://pic3.zhimg.com/50/v2-8b6b8046286c88206fa144136f803af3_hd.jpg?source=1940ef5c" alt="img"><img src="https://pic3.zhimg.com/80/v2-8b6b8046286c88206fa144136f803af3_720w.jpg?source=1940ef5c" alt="img"></p>
+<p>系统A将userId写到消息队列中，系统C和系统D从消息队列中拿数据。<strong>这样有什么好处</strong>？</p>
+<ul>
+<li>系统A<strong>只负责</strong>把数据写到队列中，谁想要或不想要这个数据(消息)，<strong>系统A一点都不关心</strong>。</li>
+<li>即便现在系统D不想要userId这个数据了，系统B又突然想要userId这个数据了，都跟系统A无关，系统A一点代码都不用改。</li>
+<li>系统D拿userId不再经过系统A，而是从消息队列里边拿。<strong>系统D即便挂了或者请求超时，都跟系统A无关，只跟消息队列有关</strong>。</li>
+</ul>
+<p>这样一来，系统A与系统B、C、D都<strong>解耦</strong>了。</p>
+<h4 id="2-2-异步"><a href="#2-2-异步" class="headerlink" title="2.2 异步"></a>2.2 异步</h4><p>我们再来看看下面这种情况：系统A还是<strong>直接调用</strong>系统B、C、D</p>
+<p><img src="https://pic3.zhimg.com/50/v2-5c3a3b8277e934440212c9f2591dc656_hd.jpg?source=1940ef5c" alt="img"><img src="https://pic3.zhimg.com/80/v2-5c3a3b8277e934440212c9f2591dc656_720w.jpg?source=1940ef5c" alt="img"></p>
+<p>代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SystemA</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    SystemB systemB = <span class="keyword">new</span> SystemB();</span><br><span class="line">    SystemC systemC = <span class="keyword">new</span> SystemC();</span><br><span class="line">    SystemD systemD = <span class="keyword">new</span> SystemD();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 系统A独有的数据</span></span><br><span class="line">    <span class="keyword">private</span> String userId ;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doOrder</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 下订单</span></span><br><span class="line">        userId = <span class="keyword">this</span>.order();</span><br><span class="line">        <span class="comment">// 如果下单成功，则安排其他系统做一些事  </span></span><br><span class="line">        systemB.SystemBNeed2do(userId);</span><br><span class="line">        systemC.SystemCNeed2do(userId);</span><br><span class="line">        systemD.SystemDNeed2do(userId);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>假设</strong>系统A运算出userId具体的值需要50ms，调用系统B的接口需要300ms，调用系统C的接口需要300ms，调用系统D的接口需要300ms。那么这次请求就需要<code>50+300+300+300=950ms</code></p>
+<p>并且我们得知，系统A做的是<strong>主要的业务</strong>，而系统B、C、D是<strong>非主要</strong>的业务。比如系统A处理的是<strong>订单下单</strong>，而系统B是订单下单成功了，那发送一条短信告诉具体的用户此订单已成功，而系统C和系统D也是处理一些小事而已。</p>
+<p>那么此时，为了<strong>提高用户体验和吞吐量</strong>，其实可以<strong>异步地</strong>调用系统B、C、D的接口。所以，我们可以弄成是这样的：</p>
+<p><img src="https://picb.zhimg.com/50/v2-a391345118fc2545b232411efea7b80d_hd.jpg?source=1940ef5c" alt="img"><img src="https://picb.zhimg.com/80/v2-a391345118fc2545b232411efea7b80d_720w.jpg?source=1940ef5c" alt="img"></p>
+<p>系统A执行完了以后，将userId写到消息队列中，然后就直接返回了(至于其他的操作，则异步处理)。</p>
+<ul>
+<li>本来整个请求需要用950ms(同步)</li>
+<li>现在将调用其他系统接口异步化，只需要100ms(异步)</li>
+</ul>
+<p>(例子可能举得不太好，但我觉得说明到点子上就行了，见谅。)</p>
+<h4 id="2-3削峰-限流"><a href="#2-3削峰-限流" class="headerlink" title="2.3削峰/限流"></a>2.3削峰/限流</h4><p>我们再来一个场景，现在我们每个月要搞一次大促，大促期间的并发可能会很高的，比如每秒3000个请求。假设我们现在有两台机器处理请求，并且每台机器只能每次处理1000个请求。</p>
+<p><img src="https://pic3.zhimg.com/50/v2-2ab4cb03f2e8a6a7ef28deb130661366_hd.jpg?source=1940ef5c" alt="img"><img src="https://pic3.zhimg.com/80/v2-2ab4cb03f2e8a6a7ef28deb130661366_720w.jpg?source=1940ef5c" alt="img"></p>
+<p>那多出来的1000个请求，可能就把我们<strong>整个系统给搞崩了</strong>…所以，有一种办法，我们可以写到消息队列中：</p>
+<p><img src="https://picb.zhimg.com/50/v2-bfe84bf8578c4e8e47fe527106b6b426_hd.jpg?source=1940ef5c" alt="img"><img src="https://picb.zhimg.com/80/v2-bfe84bf8578c4e8e47fe527106b6b426_720w.jpg?source=1940ef5c" alt="img"></p>
+<p>系统B和系统C<strong>根据自己的能够处理的请求数去消息队列中拿数据</strong>，这样即便有每秒有8000个请求，那只是把请求放在消息队列中，去拿消息队列的消息<strong>由系统自己去控制</strong>，这样就不会把整个系统给搞崩。</p>
+<h3 id="三、使用消息队列有什么问题？"><a href="#三、使用消息队列有什么问题？" class="headerlink" title="三、使用消息队列有什么问题？"></a>三、使用消息队列有什么问题？</h3><p>经过我们上面的场景，我们已经可以发现，消息队列能做的事其实还是蛮多的。</p>
+<p>说到这里，我们先回到文章的开头，”明明JDK已经有不少的队列实现了，我们还需要消息队列中间件呢？”其实很简单，JDK实现的队列种类虽然有很多种，但是都是<strong>简单的内存队列</strong>。为什么我说JDK是简单的内存队列呢？下面我们来看看要实现消息队列(中间件)<strong>可能要考虑什么问题</strong>。</p>
+<h4 id="3-1高可用"><a href="#3-1高可用" class="headerlink" title="3.1高可用"></a>3.1高可用</h4><p>无论是我们使用消息队列来做解耦、异步还是削峰，消息队列<strong>肯定不能是单机</strong>的。试着想一下，如果是单机的消息队列，万一这台机器挂了，那我们整个系统几乎就是不可用了。</p>
+<p><img src="https://pic4.zhimg.com/50/v2-56f04a3376f0af3565e363890de22650_hd.jpg?source=1940ef5c" alt="img"><img src="https://pic4.zhimg.com/80/v2-56f04a3376f0af3565e363890de22650_720w.jpg?source=1940ef5c" alt="img"></p>
+<p>所以，当我们项目中使用消息队列，都是得<code>集群/分布式</code>的。要做<code>集群/分布式</code>就必然希望该消息队列能够提供<strong>现成</strong>的支持，而不是自己写代码手动去实现。</p>
+<h4 id="3-2-数据丢失问题"><a href="#3-2-数据丢失问题" class="headerlink" title="3.2 数据丢失问题"></a>3.2 数据丢失问题</h4><p>我们将数据写到消息队列上，系统B和C还没来得及取消息队列的数据，就挂掉了。<strong>如果没有做任何的措施，我们的数据就丢了</strong>。</p>
+<p><img src="https://pic3.zhimg.com/50/v2-418113f16d65370c06e4c657b3497e59_hd.jpg?source=1940ef5c" alt="img"><img src="https://pic3.zhimg.com/80/v2-418113f16d65370c06e4c657b3497e59_720w.jpg?source=1940ef5c" alt="img"></p>
+<p>学过Redis的都知道，Redis可以将数据持久化磁盘上，万一Redis挂了，还能从磁盘从将数据恢复过来。同样地，消息队列中的数据也需要存在别的地方，这样才尽可能减少数据的丢失。</p>
+<p>那存在哪呢？</p>
+<ul>
+<li>磁盘？</li>
+<li>数据库？</li>
+<li>Redis？</li>
+<li>分布式文件系统？</li>
+</ul>
+<p>同步存储还是异步存储？</p>
+<h4 id="3-3消费者怎么得到消息队列的数据？"><a href="#3-3消费者怎么得到消息队列的数据？" class="headerlink" title="3.3消费者怎么得到消息队列的数据？"></a>3.3消费者怎么得到消息队列的数据？</h4><p>消费者怎么从消息队列里边得到数据？有两种办法：</p>
+<ul>
+<li>生产者将数据放到消息队列中，消息队列有数据了，<strong>主动叫</strong>消费者去拿(俗称push)</li>
+<li>消费者不断去<strong>轮训</strong>消息队列，看看有没有新的数据，如果有就消费(俗称pull)</li>
+</ul>
+<h4 id="3-4其他"><a href="#3-4其他" class="headerlink" title="3.4其他"></a>3.4其他</h4><p>除了这些，我们在<strong>使用的时候</strong>还得考虑各种的问题：</p>
+<ul>
+<li>消息重复消费了怎么办啊？</li>
+<li>我想保证消息是<strong>绝对</strong>有顺序的怎么做？</li>
+<li>……..</li>
+</ul>
+<p>虽然消息队列给我们带来了那么多的好处，但同时我们发现引入消息队列也会<strong>提高系统的复杂性</strong>。市面上现在已经有不少消息队列轮子了，每种消息队列都有自己的特点，<strong>选取哪种MQ还得好好斟酌</strong>。</p>
+<h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><p>本文主要讲解了什么是消息队列，消息队列可以为我们带来什么好处，以及一个消息队列可能会涉及到哪些问题。希望给大家带来一定的帮助。</p>
+<p>参考资料：</p>
+<ul>
+<li><p>Kafka简明教程</p>
+</li>
+<li><ul>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/37405836">https://zhuanlan.zhihu.com/p/37405836</a></li>
+</ul>
+</li>
+<li><p>消息队列使用的四种场景介绍，有图有解析，一看就懂</p>
+</li>
+<li><ul>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/55712984">https://zhuanlan.zhihu.com/p/55712984</a></li>
+</ul>
+</li>
+<li><p>消息队列设计精要</p>
+</li>
+<li><ul>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/21479556">https://zhuanlan.zhihu.com/p/21479556</a></li>
+</ul>
+</li>
+<li><p>消息队列的使用场景是怎样的</p>
+</li>
+<li><ul>
+<li><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/34243607">https://www.zhihu.com/question/34243607</a></li>
+</ul>
+</li>
+</ul>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/17/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E5%92%8C%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F/" class="archive-article-date">
-  	<time datetime="2020-12-17T07:47:22.493Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-17</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2020/12/17/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E5%92%8C%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/17/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E4%BD%BF%E7%94%A8%E7%9A%84%E5%9B%9B%E7%A7%8D%E5%9C%BA%E6%99%AF%E4%BB%8B%E7%BB%8D/" class="archive-article-date">
-  	<time datetime="2020-12-17T07:47:22.475Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-17</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/17/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%90%86%E8%AE%BA/" class="archive-article-date">
-  	<time datetime="2020-12-17T07:47:22.453Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-17</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+<nav id="article-nav">
+  
+  
+    <a href="/2020/12/17/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E4%BD%BF%E7%94%A8%E7%9A%84%E5%9B%9B%E7%A7%8D%E5%9C%BA%E6%99%AF%E4%BB%8B%E7%BB%8D/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/17/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%8A%80%E6%9C%AF%E6%A0%88/" class="archive-article-date">
-  	<time datetime="2020-12-17T07:47:22.451Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-17</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/17/RPC%E5%9F%BA%E6%9C%AC%E8%AE%A4%E8%AF%86%20/" class="archive-article-date">
-  	<time datetime="2020-12-17T07:47:22.433Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-17</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+        
+        
+    </div>
+</aside>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/17/Dubbo+Zookeeper%E4%BE%9D%E8%B5%96%E6%B1%87%E6%80%BB/" class="archive-article-date">
-  	<time datetime="2020-12-17T07:47:22.416Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-17</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/17/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2020-12-17T07:38:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-17</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/12/17/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">我的第一个博客文章</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/17/hello-world/" class="archive-article-date">
-  	<time datetime="2020-12-17T06:22:58.928Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/12/17/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -368,8 +478,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
